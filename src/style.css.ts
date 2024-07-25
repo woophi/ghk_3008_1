@@ -1,4 +1,5 @@
 import { style } from '@vanilla-extract/css';
+import { recipe } from '@vanilla-extract/recipes';
 
 const bottomBtn = style({
   position: 'fixed',
@@ -26,15 +27,25 @@ const titleBox = style({
   marginBottom: '2rem',
 });
 
-const boxItem = style({
-  borderRadius: '7px',
-  backgroundColor: '#F2F3F5',
-  border: '1px solid #D8D8D8',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  overflow: 'hidden',
-  cursor: 'pointer',
+const boxItem = recipe({
+  base: {
+    borderRadius: '7px',
+    backgroundColor: '#F2F3F5',
+    border: '1px solid #D8D8D8',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    overflow: 'hidden',
+    cursor: 'pointer',
+    transition: 'all .25s ease',
+  },
+  variants: {
+    checked: {
+      true: {
+        border: '1px solid #FF0000',
+      },
+    },
+  },
 });
 
 const boxTitle = style({

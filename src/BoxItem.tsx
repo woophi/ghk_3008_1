@@ -13,7 +13,7 @@ type Props = {
 
 export const BoxItem = ({ checked, img, onToggle, title, imgStyle = {} }: Props) => {
   return (
-    <div className={appSt.boxItem} onClick={() => onToggle(title)}>
+    <div className={appSt.boxItem({ checked })} onClick={() => onToggle(title)}>
       <div className={appSt.boxTitle}>
         <Typography.Text tag="p" view="component-primary" defaultMargins={false}>
           {title}
