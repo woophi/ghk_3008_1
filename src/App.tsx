@@ -123,7 +123,7 @@ export const App = () => {
       <div className={appSt.container}>
         <div className={appSt.titleBox}>
           <Typography.TitleResponsive tag="h1" view="large" font="system" weight="medium">
-            Собери свой идеальный экран
+            Соберите свой идеальный экран
           </Typography.TitleResponsive>
           <Typography.TitleResponsive
             style={{ maxWidth: '280px' }}
